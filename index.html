@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Time</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+    <!--FireBase-->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+    <!--Moment-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">When's The Next Train?</h1>
+            <p class="lead">Enter the current time to see when you can catch the next train!</p>
+        </div>
+    </div>
+    <!--Table-->
+
+    <div class="container">
+
+        <nav class="navbar navbar-light bg-light">
+
+            <a class="navbar-brand" href="#">
+                Current Train Schedule
+            </a>
+        </nav>
+        <table class="table" id='train-table'>
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+    <!--Input Form-->
+    <div class="container">
+
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Add Train
+            </a>
+        </nav>
+
+        <!--Train Time-->
+        <label for="basic-url">Train Name</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="trainName" aria-describedby="basic-addon3">
+        </div>
+        <!--Destination-->
+        <label for="basic-url">Destination</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="destination" aria-describedby="basic-addon3">
+        </div>
+        <!--First Train Time-->
+        <label for="basic-url">First Train Time (HH:mm - Military Time)</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="firstTrainTime" aria-describedby="basic-addon3">
+        </div>
+        <!--Frequency-->
+        <label for="basic-url">Frequency (min)</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" id="frequency" aria-describedby="basic-addon3">
+        </div>
+        <!--Submit Button-->
+        <button type="button" class="btn btn-primary" id="submit-btn">Submit</button>
+
+    </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
